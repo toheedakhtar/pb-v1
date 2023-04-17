@@ -1,0 +1,43 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container">
+    <div class=" p-6 mb-5 mt-2 bg-body rounded">
+    <!-- {% for message in messages %}        
+    <div class="alert alert-danger">
+        {{ message }}
+    </div>
+    {% endfor %} -->
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+    Incorrect Username or Password
+    </div>
+    {% endif %} 
+
+    <div class="login-form">
+    <br>
+    <h2>Login</h2>
+    <br>
+    <form method="POST" action=" {% url 'login' %}">
+        <div class="form-group">
+        {% csrf_token %}
+        Username
+        <input type="text" name="username" placeholder="username" autocomplete="off" class="form-control">
+        <br>
+        Password
+        <input type="password" name='password' placeholder="password" autocomplete="off" class="form-control">
+        <br>
+        <button type="submit" class="button btn-dark">Submit</button>
+    </div>
+    </form>
+    <br>
+    Don't have an account? Join Now <br>
+    <button class="button btn-dark " value="signup">
+        <a href="{% url 'signup' %}" style="text-decoration: none; color: white;">Sign Up</a>
+    </button>
+    </div>
+    </div>
+</div>
+{% endblock %}

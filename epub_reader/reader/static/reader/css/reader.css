@@ -1,0 +1,24 @@
+body{
+
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRNk0SyxvsEZysuRIHQcI67NmFdmnmWjagUg5JGtZR1w&usqp=CAU&ec=48665698');
+    color:black;
+    font-family: garamond;
+    font-weight: bolder;
+    font-size: larger;
+    padding: 30px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+}
+    
+h1{
+    text-align: left;
+}
+
+p{
+
+    color: rgb(15, 15, 15);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+    width: 100%;
+    
+}

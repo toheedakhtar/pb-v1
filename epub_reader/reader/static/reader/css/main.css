@@ -1,0 +1,22 @@
+body{
+    text-decoration: none;
+    color: black;
+}
+
+/* tr, td {
+    border: 1px solid white;
+} */
+
+.headline{
+    text-align: center;
+    font-size: x-large;
+}
+
+.upload-goto{
+    text-align: center;
+    font-size: larger;
+}
+
+.example{
+    border: 1px solid black;
+}

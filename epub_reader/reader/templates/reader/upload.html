@@ -1,0 +1,26 @@
+{% extends 'reader/base.html' %} 
+{% load crispy_forms_tags %}
+
+
+    {% block body %}
+    
+    <div class="container">
+    <div class="p-5 mb-5 mt-3 bg-body rounded">
+    <form method="POST" action="{% url 'upload' %}" enctype="multipart/form-data">
+        <div class="form-group">
+        {% csrf_token %}
+            
+        {{form|crispy}}
+        <br>
+        <button type="submit" class="btn btn-dark" value="Upload">Upload</button>
+    </div>
+
+    </form>
+    </div>
+    </div>
+
+    
+
+    {% endblock %}
+
+    

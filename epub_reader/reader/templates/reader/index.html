@@ -1,0 +1,50 @@
+{% extends 'reader/base.html' %}
+
+{% load static %}
+
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'reader/css/main.css' %}">
+<br>
+<div class="container">
+<div class="text-center">
+    <h1 style="font-weight: bolder;">PixBook</h1>
+    <h4> Read epubs as they should be.</h4>
+</div>
+<br>
+<br>
+
+
+
+<div class="upload-goto">
+    <h3>
+        Get started by uploading your epub, or read from your Books
+    </h3>
+    <div>
+    <button type="button" class="btn btn-dark"> 
+        <a href="{% url 'upload' %}" style="text-decoration: none; color: white;"> Upload</a>
+    </button>
+    <button type="button" class="btn btn-dark"> 
+        <a href="{% url 'books' %}" style="text-decoration: none; color: white;"> My Books</a>
+    </button>
+    <br>
+    <br>
+    <h3>Or read form exapmle books</h3>
+    <button type="button" class="btn btn-dark"> 
+        <a href="{% url 'ad_books' %}" style="text-decoration: none; color: white;"> App Books</a>
+    </button>
+    </div>
+</div>
+<br>
+<br>
+<br>
+    <!-- <div class="row">
+        <div class="col-6 text-center">
+            <img src="static\reader\images\127.0.0.1_8000_reader_44(iPhone XR) (2).png" class="img-fluid" alt="Image 1">
+        </div>
+        <div class="col-6 text-center">  
+            <img src="static\reader\images\127.0.0.1_8000_reader_44(iPhone XR) (1).png" class="img-fluid" alt="Image 2">
+        </div>
+    </div> -->
+</div>
+{% endblock %}

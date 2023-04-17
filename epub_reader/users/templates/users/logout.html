@@ -1,0 +1,11 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="container pt-2">
+    <h3>You are Logged Out!</h3>
+    <br>
+    <!-- <h5>Login Again</h5> -->
+    <button class="button btn-dark"><a href="{% url  'login' %}" style="text-decoration: none; color: white;">Login Again</a></button>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'reader/base.html' %}
+{% load static %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="p-5 mb-5 mt-2 bg-body rounded">
+        
+        <h3>We value your Feedback a lot!</h3>
+        <form method="post" action="{% url 'feedback' %}">
+            <div class="form-group">
+                {% csrf_token %}
+                <input type="text" name="message_name" placeholder="Your Name" autocomplete="off" class="form-control">
+                <br>
+                <input type="email" name='message_email' placeholder="Your Email" class="form-control">
+                <br>
+                <textarea name="message" class="form-control" placeholder="Provide Feedback here. Tell us how we can improve. What features do you need? Spotted a bug?" rows="8"> </textarea>
+                <br>
+                <button type="submit" class="button btn-dark">Submit</button>
+                <br>
+                {% if message %}
+                <h3>{{message}}</h3>
+                {% endif %}
+            </div>
+        </form>
+        <br>
+    </div>
+</div>
+    
+{% endblock %}
